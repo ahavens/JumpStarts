@@ -59,7 +59,8 @@
           </div>
         </div>
 
-        <div class="col-sm-9 col-sm-offset-1 col-md-10 col-md-offset-1 main">
+
+        <div class="col-sm-9 col-sm-offset-1 col-md-6 col-md-offset-1 main">
           <h2 class="sub-header">Completed Jump Starts</h2>
             <div class="table-responsive">
               <table class="table table-striped">
@@ -115,9 +116,25 @@
               </table>
            </div>
 
+          <!--div class="container" -->
+            <div class="form-group">
+              <div class='input-group date' id='datetimepicker1'>
+                  <input type='text' class="form-control" />
+                  <span class="input-group-addon">
+                      <span class="glyphicon glyphicon-calendar"></span>
+                  </span>
+              </div>
+            </div>
+          <!--/div-->
+      
 
-        </div>
-      </div>
+            <script type="text/javascript">
+              $(function () {
+                  $('#datetimepicker1').datetimepicker();
+              });
+            </script>
+          
+      </div> <!-- col-md-9 -->
     </div>
 
 
