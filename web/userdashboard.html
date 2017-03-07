@@ -22,18 +22,24 @@
         			<span class="icon-bar"></span>
         			<span class="icon-bar"></span>
       			</button>
-      			<a class="navbar-brand" href="#">Welcome User</a>
+      			<a class="navbar-brand">Welcome User</a>
     		</div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">LOG OUT</a></li>
+          </ul>
+        </div>
 
   		</div><!-- /.container-fluid -->
 	</nav>
 
-	 <div class="container-fluid">
+  <div class="container-fluid">
       <div class="row">
 
 
-        <div class="col-sm-9 col-sm-offset-1 col-md-10 col-md-offset-1 main">
-          <h1 class="page-header">Dashboard</h1>
+        <div class="col-sm-5 col-sm-offset-1 main">
+          <h1 class="page-header">Badges</h1>
 
           <div class="row placeholders">
             <div class="col-xs-6 col-sm-3 placeholder">
@@ -46,22 +52,12 @@
               <h4>Fifth Jump Start</h4>
               <span class="text-muted">Congratulations on completing your fifth Jump Start!</span>
             </div>
-            <div class="col-xs-6 col-sm-3 placeholder">
-              <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
-              <h4>Label</h4>
-              <span class="text-muted">Something else</span>
-            </div>
-            <div class="col-xs-6 col-sm-3 placeholder">
-              <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
-              <h4>Label</h4>
-              <span class="text-muted">Something else</span>
-            </div>
+            
           </div>
         </div>
 
-
-        <div class="col-sm-9 col-sm-offset-1 col-md-6 col-md-offset-1 main">
-          <h2 class="sub-header">Completed Jump Starts</h2>
+        <div class="col-sm-5 main">
+          <h1 class="page-header">Completed Jump Starts</h1>
             <div class="table-responsive">
               <table class="table table-striped">
                 <thead>
@@ -115,27 +111,34 @@
                 </tbody>
               </table>
            </div>
+        </div>
 
-          <!--div class="container" -->
-            <div class="form-group">
-              <div class='input-group date' id='datetimepicker1'>
-                  <input type='text' class="form-control" />
-                  <span class="input-group-addon">
-                      <span class="glyphicon glyphicon-calendar"></span>
-                  </span>
-              </div>
-            </div>
-          <!--/div-->
-      
-
-            <script type="text/javascript">
-              $(function () {
-                  $('#datetimepicker1').datetimepicker();
-              });
-            </script>
-          
-      </div> <!-- col-md-9 -->
     </div>
+  </div>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-4 col-sm-offset-1">
+        <div class="form-group">
+          <div class='input-group date' id='datetimepicker1'>
+              <input type='text' class="form-control" />
+                <span class="input-group-addon">
+                  <span class="glyphicon glyphicon-calendar"></span>
+                </span>
+          </div>
+        </div>
+      </div>
+      <script type="text/javascript">
+        $(function () {
+            $('#datetimepicker1').datetimepicker();
+        });
+    </script>
+
+    </div> <!-- row -->
+  <div> <!-- container fluid -->
+  
+          
+     
 
 
 </html>
