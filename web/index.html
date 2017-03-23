@@ -182,12 +182,12 @@
 			<div class="container 75%">
 				<form method="post" action="http://54.201.62.39/php/register.php">
 					<div class="row 50%">
-						<div class="6u 12u(mobile)"><input type="text" name="username" placeholder="Username" /></div>
-						<div class="6u 12u(mobile)"><input type="text" name="pnumber" placeholder="Phone Number" /></div>
+						<div class="6u 12u(mobile)"><input type="text" id = "regUsername" name="username" placeholder="Username" /></div>
+						<div class="6u 12u(mobile)"><input type="text" id = "regNumber" name="pnumber" placeholder="Phone Number" /></div>
 					</div>
 					<div class="row 50%">
-						<div class="6u 12u(mobile)"><input type="password" name="password" placeholder="Password" /></div>
-						<div class="6u 12u(mobile)"><input type="password" name="squest" placeholder="Confirm Password" /></div>
+						<div class="6u 12u(mobile)"><input type="password" id="regPass" name="password" required="required" placeholder="Password" /></div>
+						<div class="6u 12u(mobile)"><input type="password" id="regPassConfirm" name="squest" required="required" placeholder="Confirm Password" oninput="check(this)" /></div>
 					</div>
 					<div class="row">
 						<div class="12u">
@@ -240,6 +240,7 @@
 
 
 <!-- Scripts -->
+<script src = "assets/js/passwordCheck.js"></script>
 <script src="assets/js/ga.js"></script>
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/jquery.scrolly.min.js"></script>
