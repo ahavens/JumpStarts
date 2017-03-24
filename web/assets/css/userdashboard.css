@@ -43,12 +43,29 @@
 			padding: 0.85em 1em 0.85em 1em;
 		}
 
+/* Weekly Jumpstarts */
+
+	#calendar {
+		position: relative;
+		margin: 0;
+		background:#fff;
+		padding: 0em 0 3em 0;
+		text-align: center;
+	}
+
+	#calendar > header {
+			text-align: center;
+			background: transparent;
+			padding: 2.5em 0 2.5em 0;
+			margin: 0;
+		}
+
 /* Badges */
 
 	#badges {
 		position: relative;
 		margin: 0;
-		background:#ecd28f;
+		background:#fef244;
 		padding: 0em 0 3em 0;
 		text-align: center;
 	}
