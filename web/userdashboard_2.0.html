@@ -9,6 +9,9 @@
 	<link rel="stylesheet" href="assets/css/userdashboard.css" />
 	<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 	<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+	<script src="/assets">
+
+	</script>
 </head>
 
 <body>
@@ -16,8 +19,8 @@
 <section id="manifesto" class="dark">
 	<div class="container">
 		<header>
-			<h1><u>$NAME</u> is dedicated to <u>$PROJECT NAME</u>.</h1>
-			<p><u>$NAME</u> regularly works on their project around <u>$TIME</u> on <u>$DAY</u>.</p>
+			<h1><u id="fname">$NAME</u> is dedicated to <u id="project_name">$PROJECT NAME</u>.</h1>
+			<p><u id="fname">$NAME</u> regularly works on their project around <u id="time">$TIME</u> on <u id="day">$DAY</u>.</p>
 		</header>
 		<footer>
 			<div class="row">
@@ -170,6 +173,7 @@
 <script src="assets/js/jquery.scrolly.min.js"></script>
 <script src="assets/js/skel.min.js"></script>
 <script src="assets/js/util.js"></script>
+<script src = "assets/js/getUser.js"></script>
 <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 <script src="assets/js/main.js"></script>
 
