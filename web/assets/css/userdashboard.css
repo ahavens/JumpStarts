@@ -10,6 +10,14 @@
 		color: #fff;
 	}
 
+	.hidden{
+		display:none;
+	}
+
+	.unhidden{
+		display:block;
+	}
+
 /* Manifesto */
 
 	#manifesto {
@@ -41,6 +49,11 @@
 
 		#manifesto input[type="button"] {
 			padding: 0.85em 1em 0.85em 1em;
+		}
+
+/* Change Profile */
+		#change_profile {
+			display:none;
 		}
 
 /* Weekly Jumpstarts */

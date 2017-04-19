@@ -26,8 +26,58 @@
 			<div class="row">
 				<div class="12u">
 					<ul class="actions">
-						<li><input type="button" class="button" value="Change Schedule" /></li>
+						<li><input type="button" class="button" value="Change Schedule" id="change_profile_button"/></li>
 					</ul>
+					<div class="container 75%" id="change_profile">
+						<form method="post" action="http://54.201.62.39/php/register.php">
+							<div class="row 50%">
+								<div class="6u 12u(mobile)"><input type="text" id = "regUsername" name="username" placeholder="Username" /></div>
+								<div class="6u 12u(mobile)"><input type="text" id = "regNumber" name="pnumber" placeholder="Phone Number" /></div>
+							</div>
+							<div class="row 50%">
+								<div class="6u 12u(mobile)"><input type="password" id="regPass" name="password" required="required" placeholder="Password" /></div>
+								<div class="6u 12u(mobile)"><input type="password" id="regPassConfirm" name="squest" required="required" placeholder="Confirm Password" oninput="check(this)" /></div>
+							</div>
+							<div class="row 50%">
+								<div class="12u"><input type="text" id="email" name="email" required="required" placeholder="Email" /></div>
+							</div>
+							<div class="row">
+								<div class="12u">
+									<h2>What would you like to call the project you're currently working on?</h2>
+								</div>
+							</div>
+							<div class="row 50%">
+								<div class="12u"><input type="text" name="project_name" placeholder="Project Name" /></div>
+							</div>
+							<div class="row">
+								<div class="12u">
+									<h2>Around what time of the day would you say that you spend the most time on your projects?</h2>
+								</div>
+							</div>
+							<div class="row 50%">
+								<div class="6u 12u(mobile)">
+									<select name="day">
+										<!--I KNOW I NEED TO ADD A LITTLE DROPDOWN ARROW IT BOTHERS ME VISUALLY ALSO :'(-->
+										<option value="Sunday">Sunday</option>
+										<option value="Monday">Monday</option>
+										<option value="Tuesday">Tuesday</option>
+										<option value="Wednesday">Wednesday</option>
+										<option value="Thursday">Thursday</option>
+										<option value="Friday">Friday</option>
+										<option value="Saturday">Saturday</option>
+									</select>
+								</div>
+								<div class="6u 12u(mobile)"><input type="time" name="time" /></div>
+							</div>
+							<div class="row">
+								<div class="12u">
+									<ul class="actions">
+										<li><input type="submit" class="button" value="Register" /></li>
+									</ul>
+								</div>
+							</div>
+						</form>
+					</div>
 				</div>
 			</div>
 		</footer>
