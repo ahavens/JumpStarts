@@ -42,7 +42,13 @@
 		#manifesto input[type="button"] {
 			padding: 0.85em 1em 0.85em 1em;
 		}
-		
+
+	.label {
+		margin-bottom: 0;
+	}
+
+	#cancel_changes { 
+	}
 /* Weekly Jumpstarts */
 
 	#calendar {

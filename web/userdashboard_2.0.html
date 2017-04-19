@@ -19,45 +19,41 @@
 <section id="manifesto" class="dark">
 	<div class="container">
 		<header>
-			<h1><u id="fname_1">$NAME</u> is dedicated to <u id="project_name">$PROJECT NAME</u>.</h1>
-			<p><u id="fname_2">$NAME</u> regularly works on their project around <u id="time">$TIME</u> on <u id="day">$DAY</u>.</p>
+			<h1>I am dedicated to <u id="project_name">$PROJECT NAME</u>.</h1>
+			<p>I regularly works on it around <u id="time">$TIME</u> on <u id="day">$DAY</u>.</p>
 		</header>
 		<footer>
 			<div class="row">
 				<div class="12u">
-					<ul class="actions">
+					<ul class="actions" id="change_profile_button_container">
 						<li><input type="button" class="button" value="Change Schedule" id="change_profile_button"/></li>
 					</ul>
 					<div class="container 75%" id="change_profile">
-						<form method="post" action="http://54.201.62.39/php/register.php">
-							<div class="row 50%">
-								<div class="6u 12u(mobile)"><input type="text" id = "regUsername" name="username" placeholder="Username" /></div>
-								<div class="6u 12u(mobile)"><input type="text" id = "regNumber" name="pnumber" placeholder="Phone Number" /></div>
-							</div>
-							<div class="row 50%">
-								<div class="6u 12u(mobile)"><input type="password" id="regPass" name="password" required="required" placeholder="Password" /></div>
-								<div class="6u 12u(mobile)"><input type="password" id="regPassConfirm" name="squest" required="required" placeholder="Confirm Password" oninput="check(this)" /></div>
-							</div>
-							<div class="row 50%">
-								<div class="12u"><input type="text" id="email" name="email" required="required" placeholder="Email" /></div>
-							</div>
+						<form method="post" action="http://54.201.62.39/php/edit_profile.php">
 							<div class="row">
 								<div class="12u">
-									<h2>What would you like to call the project you're currently working on?</h2>
+									<p class="label">Project Name</p>
+									<input type="text" id="project_name" name="project_name" placeholder="Project Name" />
 								</div>
 							</div>
 							<div class="row 50%">
-								<div class="12u"><input type="text" name="project_name" placeholder="Project Name" /></div>
+								<div class="6u 12u(mobile)">
+									<p class="label">Phone Number</p>
+									<input type="text" id="pnumber" name="pnumber" placeholder="Phone Number" />
+								</div>
+								<div class="6u 12u(mobile)">
+									<p class="label">Email</p>
+									<input type="text" id="email" name="email" placeholder="Email" />
+								</div>
 							</div>
 							<div class="row">
 								<div class="12u">
-									<h2>Around what time of the day would you say that you spend the most time on your projects?</h2>
+									<h2>Around what time of the day would you say that you spend the most time on this project?</h2>
 								</div>
 							</div>
 							<div class="row 50%">
 								<div class="6u 12u(mobile)">
 									<select name="day">
-										<!--I KNOW I NEED TO ADD A LITTLE DROPDOWN ARROW IT BOTHERS ME VISUALLY ALSO :'(-->
 										<option value="Sunday">Sunday</option>
 										<option value="Monday">Monday</option>
 										<option value="Tuesday">Tuesday</option>
@@ -72,11 +68,18 @@
 							<div class="row">
 								<div class="12u">
 									<ul class="actions">
-										<li><input type="submit" class="button" value="Register" /></li>
+										<li><input type="submit" class="button" value="Set Changes" /></li>
 									</ul>
 								</div>
 							</div>
 						</form>
+						<div class="row">
+							<div class="12u">
+								<ul class="actions">
+									<li><input type="reset" id="cancel_changes" class="button cancel" value="Cancel" /></li>
+								</ul>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>

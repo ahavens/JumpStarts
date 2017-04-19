@@ -14,9 +14,7 @@ $(document).ready(function() {
                 */
 
                 //Populate Manifesto
-               $('#fname_1').text(data.fname);
                $('#project_name').text(data.project_name);
-               $('#fname_2').text(data.fname);
                $('#time').text((data.time).toString());
                $('#day').text(data.day);
             }
