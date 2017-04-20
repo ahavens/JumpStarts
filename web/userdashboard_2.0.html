@@ -19,8 +19,8 @@
 <section id="manifesto" class="dark">
 	<div class="container">
 		<header>
-			<h1>I am dedicated to <u id="project_name">$PROJECT NAME</u>.</h1>
-			<p>I regularly works on it around <u id="time">$TIME</u> on <u id="day">$DAY</u>.</p>
+			<h1>I am dedicated to <u id="manifesto_project_name">$PROJECT NAME</u>.</h1>
+			<p>I regularly works on it around <u id="manifesto_time">$TIME</u> on <u id="manifesto_day">$DAY</u>.</p>
 		</header>
 		<footer>
 			<div class="row">
@@ -29,7 +29,7 @@
 						<li><input type="button" class="button" value="Change Schedule" id="change_profile_button"/></li>
 					</ul>
 					<div class="container 75%" id="change_profile">
-						<form method="post" action="http://54.201.62.39/php/edit_profile.php">
+						<form method="post" action="http://54.201.62.39/php/edit_user_details.php">
 							<div class="row">
 								<div class="12u">
 									<p class="label">Project Name</p>
@@ -215,6 +215,7 @@
 		<ul class="menu">
 			<li>Jumpstarts</li>
 			<li>Watch, Write, Think</li>
+			<li id="logout">Log Out</li>
 		</ul>
 	</div>
 </section>
@@ -227,7 +228,7 @@
 <script src="assets/js/skel.min.js"></script>
 <script src="assets/js/util.js"></script>
 <script src="assets/js/getUser.js"></script>
-<script src="assets/js/populate_dashboard.js"></script>
+<script src="assets/js/dashboard_events.js"></script>
 <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 <script src="assets/js/main.js"></script>
 

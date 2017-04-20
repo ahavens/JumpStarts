@@ -14,9 +14,15 @@ $(document).ready(function() {
                 */
 
                 //Populate Manifesto
-               $('#project_name').text(data.project_name);
-               $('#time').text((data.time).toString());
-               $('#day').text(data.day);
+               $('#manifesto_project_name').text(data.project_name);
+               $('#manifesto_time').text((data.time).toString());
+               $('#manifesto_day').text(data.day);
+
+               //Populate Edit User Details (Can't set time placeholder so ignore that field)
+               $('#project_name').attr("placeholder", data.project_name);
+               $('#pnumber').attr("placeholder", data.pnumber);
+               $('#email').attr("placeholder", data.email);
+               $('#day').attr("placeholder", data.day);
             }
             else {
                 alert(data);
