@@ -1,20 +1,4 @@
-$(document).ready(function(){
-
-    /*
-    ** Toggle show/hide the "edit user details" form
-    */
-    $("#change_profile").hide();  
-    $("#change_profile_button").click(function(){
-        $("#change_profile").show();
-        $("#change_profile_button_container").hide();
-    });
-
-    $("#cancel_changes").click(function(){
-        $("#change_profile").hide();
-        $("#change_profile_button_container").show();
-    });
-
-
+function populateManifesto(){
     /*
     ** Submit changes to user's account
     */
@@ -39,6 +23,28 @@ $(document).ready(function(){
               }
             }
           });
+
+    return;
+}
+
+
+$(document).ready(function(){
+
+    populateManifesto();
+
+    /*
+    ** Toggle show/hide the "edit user details" form
+    */
+    $("#change_profile").hide();  
+    $("#change_profile_button").click(function(){
+        $("#change_profile").show();
+        $("#change_profile_button_container").hide();
+    });
+
+    $("#cancel_changes").click(function(){
+        $("#change_profile").hide();
+        $("#change_profile_button_container").show();
+    });
 
    /*
     ** Log Out
