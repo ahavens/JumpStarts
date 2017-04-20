@@ -26,7 +26,7 @@ function convertDay(day) {
     } 
 }
 
-//Find the month and day of the next Jumpstart to send
+//Find the date object of the next Jumpstart send date
 function getNextDeliveryDate(day) {
     var converted_delivery_day = convertDay(day);
 
@@ -53,7 +53,7 @@ function getNextDeliveryDate(day) {
     return date_of_delivery;
 }
 
-//Generate Array of delivery dates for calendar population
+//Generate a String Array of delivery dates for calendar population
 function getDeliveryDates(day) {
     //Get the date of the next jumpstart as a seed value
     var next_delivery_date = getNextDeliveryDate(day);
