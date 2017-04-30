@@ -1,3 +1,16 @@
+function toggle_subscription() {
+    $.ajax({
+      method: "POST",
+      url: 'http://54.201.62.39/php/????????????????????.php',
+      data: { } //Some cookie shit
+    })
+   success: function(data) {
+        if(data.success == true){ // if callback is good
+            location.reload(); // then reload the page.
+        }
+    }
+}
+
 $(document).ready(function(){
 
     /*
@@ -23,9 +36,7 @@ $(document).ready(function(){
     });
 
     $(".sub_toggle").click(function(){
-        //Toggle subscription status
+        toggle_subscription();
     });
-
-     $("#subscription_status").replaceWith("You are currently <b>subscribed</b> to weekly Jumpstarts. Don't want to be? <u class=\"sub_toggle\">Click here.</u>");
 
 });
