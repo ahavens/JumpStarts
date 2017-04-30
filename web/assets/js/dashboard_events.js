@@ -2,13 +2,24 @@ function toggle_subscription() {
     $.ajax({
       method: "POST",
       url: 'http://54.201.62.39/php/????????????????????.php',
-      data: { } //Some cookie shit
-    })
-   success: function(data) {
+      data: { }, //Some cookie shit
+      success: function(data) {
         if(data.success == true){ // if callback is good
             location.reload(); // then reload the page.
         }
-    }
+      }
+    });
+}
+
+function logout() {
+    $.ajax({
+      method: "POST",
+      url: 'http://54.201.62.39/php/logout.php',
+      data: { }, //Some cookie shit
+      success: function(data) {
+        //Not sure if anything needs to happen here.
+      }  
+    });
 }
 
 $(document).ready(function(){
@@ -32,7 +43,7 @@ $(document).ready(function(){
     ** Probably some weird cookie shit happens here idk
     */  
     $("#logout").click(function(){
-        //Logout somehow
+        logout();
     });
 
     $(".sub_toggle").click(function(){
