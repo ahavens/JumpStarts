@@ -22,5 +22,10 @@ $(document).ready(function(){
         //Logout somehow
     });
 
+    $(".sub_toggle").click(function(){
+        //Toggle subscription status
+    });
+
+     $("#subscription_status").replaceWith("You are currently <b>subscribed</b> to weekly Jumpstarts. Don't want to be? <u class=\"sub_toggle\">Click here.</u>");
 
 });

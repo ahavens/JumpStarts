@@ -105,6 +105,13 @@ $(document).ready(function() {
                $('#email').attr("placeholder", data.email);
                $('#day').attr("placeholder", data.day);
 
+               //Check Subscription Status
+               if (data.send_text === 1){
+                    $("#subscription_status").replaceWith("You are currently <b>subscribed</b> to weekly Jumpstarts. Don't want to be? <u class=\"sub_toggle\">Click here.</u>");
+               } else {
+                    $("#subscription_status").replaceWith("You are currently <b>unsubscribed</b> to weekly Jumpstarts. Want back in? <u class=\"sub_toggle\">Click here.</u>");
+               }
+
                //Populate Calendar
                var delivery_dates = getDeliveryDates(data.day);
                $('#calendar_0').text(delivery_dates[0]);
