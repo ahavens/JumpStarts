@@ -1,7 +1,7 @@
 //Convert Day from string to integer value 0-7
 function convertDay(day) {
     //Ensure that input variable is a string
-    if (typeof myVar === 'string' || myVar instanceof String) {
+    if (typeof day === 'string' || day instanceof String) {
         var converted_day = 6;
 
         //Check days to find correct number to use
@@ -59,13 +59,18 @@ function getDeliveryDates(day) {
     var next_delivery_date = getNextDeliveryDate(day);
     
     var delivery_dates = [];
-    var temp_date = new Date();
+    var temp_date = next_delivery_date;
     var i, dd, mm;
-    var offset = -14; //Jumpstart from 2 weeks ago = 14 days ago
+    var offset = 7; //Jumpstarts are delivered weekly
 
     //Using the seed value, calculate previous jumpstart dates (negative offset), next jumpstart date (no offset), and future dates (positive offset) 
     for (i = 0; i < 6; i++){
-        temp_date.setDate(next_delivery_date.getDate() + offset);
+        if (i === 0){
+            temp_date.setDate(temp_date.getDate() - 14)//First date in list is 2 weeks ago
+        } else {
+            temp_date.setDate(temp_date.getDate() + offset);
+        }
+        
         dd = temp_date.getDate();
         mm = temp_date.getMonth()+1; //January is 0!
     
@@ -74,9 +79,22 @@ function getDeliveryDates(day) {
         } 
 
         delivery_dates.push(mm+'/'+dd);
-        offset += 7;
     }
     return delivery_dates;
+}
+
+function test() {
+
+    console.log("Testing!");
+
+    //Populate Calendar
+    var delivery_dates = getDeliveryDates("Wednesday");
+    $('#calendar_0').text(delivery_dates[0]);
+    $('#calendar_1').text(delivery_dates[1]);
+    $('#calendar_2').text(delivery_dates[2]);
+    $('#calendar_3').text(delivery_dates[3]);
+    $('#calendar_4').text(delivery_dates[4]);
+    $('#calendar_5').text(delivery_dates[5]);
 }
 
 
@@ -127,5 +145,8 @@ $(document).ready(function() {
             }
         }
     });
+
+    //Uncomment this if you need to test the calendar stuff locally
+    //test();
 
 });
