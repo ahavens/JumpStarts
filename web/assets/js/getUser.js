@@ -83,7 +83,7 @@ function getDeliveryDates(day) {
     return delivery_dates;
 }
 
-function test() {
+function testCalendar() {
 
     console.log("Testing!");
 
@@ -97,6 +97,20 @@ function test() {
     $('#calendar_5').text(delivery_dates[5]);
 }
 
+function populateBadges(watched_total) {
+    var badges = [];
+    if (watched_total <= 0) {
+        badges = [false, false, false];
+    } else if (watched_total < 5) {
+        badges = [true, false, false];
+    } else if (watched_total < 7) {
+        badges = [true, true, false];
+    } else {
+        badges = [true, true, true];
+    }
+
+    return badges;
+}
 
 $(document).ready(function() {
     $.ajax({
@@ -113,9 +127,9 @@ $(document).ready(function() {
                 */
 
                 //Populate Manifesto
-               $('#manifesto_project_name').text(data.project_name);
-               $('#manifesto_time').text((data.time).toString());
-               $('#manifesto_day').text(data.day);
+                $('#manifesto_project_name').text(data.project_name);
+                $('#manifesto_time').text((data.time).toString());
+                $('#manifesto_day').text(data.day);
 
                //Populate Edit User Details (Can't set time placeholder so ignore that field)
                $('#project_name').attr("placeholder", data.project_name);
@@ -125,10 +139,10 @@ $(document).ready(function() {
 
                //Check Subscription Status
                if (data.send_text === 1){
-                    $("#subscription_status").replaceWith("You are currently <b>subscribed</b> to weekly Jumpstarts. Don't want to be? <u class=\"sub_toggle\">Click here.</u>");
-               } else {
-                    $("#subscription_status").replaceWith("You are currently <b>unsubscribed</b> to weekly Jumpstarts. Want back in? <u class=\"sub_toggle\">Click here.</u>");
-               }
+                $("#subscription_status").replaceWith("You are currently <b>subscribed</b> to weekly Jumpstarts. Don't want to be? <u class=\"sub_toggle\">Click here.</u>");
+            } else {
+                $("#subscription_status").replaceWith("You are currently <b>unsubscribed</b> to weekly Jumpstarts. Want back in? <u class=\"sub_toggle\">Click here.</u>");
+            }
 
                //Populate Calendar
                var delivery_dates = getDeliveryDates(data.day);
@@ -139,6 +153,36 @@ $(document).ready(function() {
                $('#calendar_4').text(delivery_dates[4]);
                $('#calendar_5').text(delivery_dates[5]);
 
+                //Populate Badges
+                var badges = populateBadges(data.watched_total);
+                
+                //Check Badge 1
+                if (badges[0]){
+                    $('#badge_1').attr("src", "images/badge_1.png");
+                    $('#badge_tag_1').text("Completed 1 Jumpstart");
+                } else {
+                    $('#badge_1').attr("src", "images/badge_na.png");
+                    $('#badge_tag_1').text("???");
+                }
+
+                //Check Badge 2
+                if (badges[1]){
+                    $('#badge_2').attr("src", "images/badge_5.png");
+                    $('#badge_tag_2').text("Completed 5 Jumpstarts");
+                } else {
+                    $('#badge_2').attr("src", "images/badge_na.png");
+                    $('#badge_tag_2').text("???");
+                }
+
+                //Check Badge 3
+                if (badges[2]){
+                    $('#badge_3').attr("src", "images/badge_all.png");
+                    $('#badge_tag_3').text("Completed All Jumpstarts!");
+                } else {
+                    $('#badge_3').attr("src", "images/badge_na.png");
+                    $('#badge_tag_3').text("???");
+                }
+
             }
             else {
                 alert(data);
@@ -147,6 +191,5 @@ $(document).ready(function() {
     });
 
     //Uncomment this if you need to test the calendar stuff locally
-    //test();
-
+    //testCalendar();
 });
