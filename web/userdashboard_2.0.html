@@ -26,7 +26,7 @@
 			<div class="row">
 				<div class="12u">
 					<ul class="actions" id="change_profile_button_container">
-						<li><input type="button" class="button" value="Change Schedule" id="change_profile_button"/></li>
+						<li><input type="button" class="button" value="Edit Details" id="change_profile_button"/></li>
 					</ul>
 					<div class="container 75%" id="change_profile">
 						<form method="post" action="http://54.201.62.39/php/edit_user_details.php">
@@ -44,6 +44,21 @@
 								<div class="6u 12u(mobile)">
 									<p class="label">Email</p>
 									<input type="text" id="email" name="email" placeholder="Email" />
+								</div>
+							</div>
+							<div class="row">
+								<div class="12u">
+									<h2>How would you like to receive your weekly Jumpstarts?</h2>
+								</div>
+							</div>
+							<div class="row 50%">
+								<div class="12u 12u(mobile)">
+									<select name="delivery_method">
+										<option value="1">Text</option>
+										<option value="2">Email</option>
+										<option value="3">Both</option>
+										<option value="0">Neither (Unsubscribe)</option>
+									</select>
 								</div>
 							</div>
 							<div class="row">
@@ -157,8 +172,6 @@
 </section>
 
 <!-- Badges -->
-<!--CURRENTLY ALL BADGES ARE HARDCODED IN. NEED TO CHECK USER DETAILS AND UPDATE ACCORDINGLY IN THE FUTURE-->
-
 <section id="badges" class="main">
 	<header>
 		<div class="container">
@@ -172,7 +185,7 @@
 				<section>
 					<img id="badge_1">
 					<header>
-						<h3 id="badge_tag_1">Complete 1 Jumpstart</h3>
+						<h3 id="badge_tag_1"></h3>
 					</header>
 				</section>
 			</div>
@@ -180,7 +193,7 @@
 				<section>
 					<img id="badge_2">
 					<header>
-						<h3 id="badge_tag_2">Complete 5 Jumpstarts</h3>
+						<h3 id="badge_tag_2"></h3>
 					</header>
 				</section>
 			</div>
@@ -188,7 +201,7 @@
 				<section>
 					<img id="badge_3">
 					<header>
-						<h3 id="badge_tag_3">???</h3>
+						<h3 id="badge_tag_3"></h3>
 					</header>
 				</section>
 			</div>

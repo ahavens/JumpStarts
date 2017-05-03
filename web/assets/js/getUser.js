@@ -136,6 +136,8 @@ $(document).ready(function() {
                $('#pnumber').attr("placeholder", data.pnumber);
                $('#email').attr("placeholder", data.email);
                $('#day').attr("placeholder", data.day);
+               $('#delivery_method').attr("placeholder", data.delivery_method);
+
 
                //Check Subscription Status
                if (data.send_text === 1){

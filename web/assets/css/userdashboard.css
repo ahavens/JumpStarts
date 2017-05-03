@@ -136,6 +136,10 @@
 			margin: 0;
 		}
 
+	#badges h2, #badges h3, #badges p {
+		color: #ffffff;
+	}
+
 /* Logout */
 
 	#logout {
