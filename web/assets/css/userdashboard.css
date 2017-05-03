@@ -15,7 +15,13 @@
 	#manifesto {
 		position: relative;
 		margin: 0;
-		background:#778899;
+		/*background:#778899; */
+		/* 78 129 110 */
+		background: url('images/banner01.png');
+		background-size: cover;
+		background-repeat: no-repeat;
+		width: 100%;
+		overflow: hidden;
 		padding: 7em 0 4em 0;
 		text-align: center;
 	}
@@ -112,7 +118,13 @@
 	#badges {
 		position: relative;
 		margin: 0;
-		background:#fef244;
+		/* background:#fef244; */
+		/* 103 137 149 */
+		background: url('images/banner02.png');
+		background-size: cover;
+		background-repeat: no-repeat;
+		width: 100%;
+		overflow: hidden;
 		padding: 0em 0 3em 0;
 		text-align: center;
 	}
