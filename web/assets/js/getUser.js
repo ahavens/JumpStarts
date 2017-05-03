@@ -183,6 +183,12 @@ $(document).ready(function() {
                     $('#badge_tag_3').text("???");
                 }
 
+                //Populate Streak
+                if (data.streak_length < 2) {
+                    $('#streak').text("None!");
+                } else {
+                    $('#streak').text(data.streak_length);
+                }
             }
             else {
                 alert(data);
